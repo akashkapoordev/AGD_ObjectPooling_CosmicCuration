@@ -40,6 +40,12 @@ namespace CosmicCuration.Utilities
             throw new NotImplementedException("Object pool is not implemented");
         }
 
+        public void ReturnItem(T ReturnedItem)
+        {
+            PooledItem<T> pooledItem = pooledItems.Find(i => i.item.Equals(ReturnedItem));
+            pooledItem.isUsed = false;
+        }
+
 
 
         public class PooledItem<T>
