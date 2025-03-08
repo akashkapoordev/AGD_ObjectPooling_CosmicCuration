@@ -1,8 +1,9 @@
+using CosmicCuration.Utilities;
 using System.Collections.Generic;
 
 namespace CosmicCuration.Bullets
 {
-    public class BulletPool
+    public class BulletPool : GenericObjectPool<BulletController>
     {
         private BulletView bulletPrefab;
         private BulletScriptableObject bulletSO;
